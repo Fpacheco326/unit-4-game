@@ -23,7 +23,7 @@ header{
     background-color: blueviolet;
     font-size: 80px ;
     color: rgb(10, 245, 10);
-    margin: 250px auto ;
+    margin: 30px auto ;
     margin-right: 75%;
     float: left;
     height: 200px ;
@@ -33,8 +33,115 @@ header{
 
 p{
     
-    font-size: 15px ;
+    font-size: 20px ;
     text-align: left ;
     color: greenyellow;
     
 }
+
+#RedGem{
+    background-image: url('../images/red-infinity-stone-poster-style-1-cole-iba.jpg');
+    background-position: center;
+    background-size: cover;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+  }
+  #BlueGem{
+    background-image: url('../images/blue-infinity-stone-poster-style-3-cole-iba.jpg');
+    background-position: center;
+    background-size: cover;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+  }
+
+  #GreenGem{
+    background-image: url('../images/green-infinity-stone-poster-style-3-cole-iba.jpg');
+    background-position: center;
+    background-size: cover;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+  }
+
+  #YellowGem{
+    background-image: url('../images/yellow-infinity-stone-poster-style-1-cole-iba.jpg');
+    background-position: center;
+    background-size: cover;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+  }
+
+.GemButtons{
+    float: left;
+    margin-left: 25%;
+    margin-bottom: 50px;
+    margin-top: 25px;
+    
+}
+
+#TotalScore{
+    border:1px solid black;
+    background-color: blueviolet;
+    font-size: 20px ;
+    text-align: center;
+    color: rgb(10, 245, 10);
+    height: 60px ;
+    width: 280px ;
+
+}
+
+#CompGem{
+    border:1px solid black;
+    background-color: blueviolet;
+    font-size: 20px ;
+    text-align: center;
+    color: rgb(10, 245, 10);
+    margin: 50px auto ;
+    margin-right: 75%;
+    float: left;
+    height: 100px ;
+    width: 100px ;
+
+}
+
+#Wins_Losses{
+    border:1px solid black;
+    background-color: blueviolet;
+    font-size: 20px ;
+    text-align: center;
+    color: rgb(10, 245, 10);
+    /* margin: 50px auto ; */
+    margin-right: 75%;
+    float: left;
+    height: 100px ;
+    width: 100px ;
+
+}
+
