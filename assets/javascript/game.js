@@ -10,7 +10,7 @@ $(function () {
   var totalScore = 0;
   var wins = 0;
   var losses = 0;
- 
+
 
 
   function gameReset() {
@@ -22,22 +22,26 @@ $(function () {
     yellowGem = getRandomNumber(1, 12);
     totalScore = 0;
     $("#TotalScore").text(totalScore);
-  
+
   }
-  
-  function win() {
-    alert("You Win!");
-    wins++;
-    $("#wins").text(wins);
-    gameReset();
+  function wins() {
+    if (totalScore === compGem) {
+
+      alert("You Win!");
+      wins++;
+      $("#wins").text(wins);
+      gameReset();
+    }
+
+    if (totalScore > compGem) {
+      alert("You Lose!");
+      losses++;
+      $("#losses").text(losses);
+      gameReset();
+    }
   }
-  
-  function lose() {
-    alert("You Lose!");
-    losses++;
-    $("#losses").text(losses);
-    gameReset();
-  }
+
+
   fillWins = document.querySelector('#wins').innerHTML = wins;
   fillLosses = document.querySelector('#losses').innerHTML = losses;
   console.log(wins)
@@ -74,7 +78,6 @@ $(function () {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
-
 
 
 
