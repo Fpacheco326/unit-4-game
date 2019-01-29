@@ -1,8 +1,5 @@
 $(function () {
-
-
-  var compGem = getRandomNumber(19, 120);
-  var goal = 0;
+  var goal = getRandomNumber(19, 120);
   var redGem = getRandomNumber(1, 12);
   var blueGem = getRandomNumber(1, 12);
   var greenGem = getRandomNumber(1, 12);
@@ -11,11 +8,9 @@ $(function () {
   var wins = 0;
   var losses = 0;
 
-
-
   function gameReset() {
-    compGem = getRandomNumber(19, 120);
-    $("#compGem").text(compGem);
+    goal = getRandomNumber(19, 120);
+    $("#Goal").text(goal);
     redGem = getRandomNumber(1, 12);
     blueGem = getRandomNumber(1, 12);
     greenGem = getRandomNumber(1, 12);
@@ -24,16 +19,15 @@ $(function () {
     $("#TotalScore").text(totalScore);
 
   }
-  function wins() {
-    if (totalScore === compGem) {
-
+  function results() {
+    if (totalScore === goal) {
       alert("You Win!");
       wins++;
       $("#wins").text(wins);
       gameReset();
     }
 
-    if (totalScore > compGem) {
+    else if (totalScore > goal) {
       alert("You Lose!");
       losses++;
       $("#losses").text(losses);
@@ -41,36 +35,32 @@ $(function () {
     }
   }
 
-
   fillWins = document.querySelector('#wins').innerHTML = wins;
   fillLosses = document.querySelector('#losses').innerHTML = losses;
-  console.log(wins)
-
 
   $('#CompGem').one('click', function () {
-    goal += compGem;
     $('#Goal').text(goal);
-
   });
 
   $('#RedGem').on('click', function () {
     totalScore += redGem;
     $('#TotalScore').text(totalScore);
-
+    results();
   });
   $('#BlueGem').on('click', function () {
     totalScore += blueGem;
     $('#TotalScore').text(totalScore);
-
+    results();
   });
   $('#GreenGem').on('click', function () {
     totalScore += greenGem;
     $('#TotalScore').text(totalScore);
-
+    results();
   });
   $('#YellowGem').on('click', function () {
     totalScore += yellowGem;
     $('#TotalScore').text(totalScore);
+    results();
   });
 
   function getRandomNumber(min, max) {
@@ -78,8 +68,4 @@ $(function () {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
-
-
-
-
 })
